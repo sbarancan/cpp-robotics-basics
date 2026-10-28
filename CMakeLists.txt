@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(amr_core
     src/pose2d.cpp
+    src/angles.cpp
 )
 
 target_include_directories(amr_core
@@ -14,11 +15,18 @@ target_include_directories(amr_core
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-add_executable(pose2d_example
-    examples/pose2d_example.cpp
+add_executable(01_pose2d
+    examples/01_pose2d.cpp
+)
+add_executable(02_angles
+    examples/02_angles.cpp
 )
 
-target_link_libraries(pose2d_example
+target_link_libraries(01_pose2d
+    PRIVATE
+        amr_core
+)
+target_link_libraries(02_angles
     PRIVATE
         amr_core
 )
