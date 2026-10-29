@@ -4,6 +4,18 @@ cmake --build build        # every time you edit code
 ./build/pose2d_example     # run it
 
 
+
+---      GİT      ---
+            git status
+git add .gitignore CMakeLists.txt
+git add .
+            git diff --staged
+git commit -m "message"
+            git log --oneline
+git push
+
+
+
 compile and link:  g++ file.cpp -o hello     does both in one step. CMake and make do build and link for many files and they only rebuild what is changed.
 
 --- CMAKE ----

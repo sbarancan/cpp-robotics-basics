@@ -14,6 +14,9 @@ target_include_directories(amr_core
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
+target_compile_options(amr_core PRIVATE -Wall -Wextra)
+
+
 
 add_executable(01_pose2d
     examples/01_pose2d.cpp
